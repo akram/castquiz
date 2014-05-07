@@ -6,6 +6,15 @@ angular.module('app.controller.Quiz', ['ngAnimate'])
         window.$scope = $scope;
 
         // Keep track of the game state
+        $scope.currentIndex = QuizService.currentIndex;
+        $scope.$watch(function() {
+            return QuizService.currentIndex
+        }, function(newVal, oldVal) {
+            if (typeof newVal !== 'undefined') {
+                $scope.currentIndex = QuizService.currentIndex;
+            }
+        });
+        
         $scope.gameState = QuizService.gameState;
         $scope.$watch(function() {
             return QuizService.gameState

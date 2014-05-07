@@ -1,5 +1,5 @@
 <div class="row" ng-switch on="gameState">
-    <div style="opacity:0;width:20%;top:50%;left:40%;position:fixed;background:black;z-index:1;text-align:center" id="question-splash">QUESTION 1</div>
+    <div class="question-popup" id="question-splash">{{currentIndex+1}}</div>
 
     <div ng-switch-when="NONTHING" class="full-size">
 

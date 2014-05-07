@@ -18,6 +18,7 @@ body {
 }
 
 .answer.correct-answer-add {
+
     -webkit-animation: 3s correct;
 
     animation: 3s correct;
@@ -25,6 +26,7 @@ body {
 }
 
 #question-splash.new-question-add {
+
     -webkit-animation: 3s bounceIn;
 
     animation: 3s bounceIn;
@@ -32,6 +34,7 @@ body {
 }
 
 #question-splash.new-question-remove {
+
     -webkit-animation: 1s hide;
 
     animation: 1s hide;
@@ -39,6 +42,7 @@ body {
 }
 
 .correct-add {
+
     -webkit-animation: 3s correct-player;
 
     animation: 3s correct-player;
@@ -174,6 +178,36 @@ body {
     font-size: 35px;
 
     text-shadow: 2px 2px 5px #000;
+
+}
+
+.question-popup {
+
+    font-size: 296px;
+
+    line-height: 296px;
+
+    width: 20%;
+
+    top: 50%;
+
+    height: 300px;
+
+    margin-top: -148px;
+
+    left: 40%;
+
+    position: absolute;
+
+    z-index: 1;
+
+    text-align: center;
+
+    opacity: 0;
+
+    text-shadow: 2px 2px 5px #000;
+
+    font-family: goofy;
 
 }
 
