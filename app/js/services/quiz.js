@@ -22,6 +22,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
         }
 
         function OutBoundQuizQuestion(question) {
+            this.gameState = "STARTED"
             this.question = question.question;
             this.choices = question.choices;
         }
@@ -42,7 +43,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
                 _this.gameState = "GAME_OVER";
                 MessageService.broadcastMessage({
                     gameState: _this.gameState
-                })
+                });
                 PlayerService.setWinners();
                 PlayerService.cyclePlayers();
             }
@@ -51,6 +52,9 @@ angular.module('app.service.Quiz', ['ngAnimate'])
         this.revealAnswer = function(_this) {
             $animate.addClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer", function() {
                 _this.nextQuestion(_this);
+                MessageService.broadcastMessage({
+                    gameState: "INTERMEDIATE"
+                });
                 $animate.removeClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer");
             });
         }
