@@ -6,6 +6,7 @@ angular.module('app', [
     'app.service.Quiz',
     'app.service.Player',
     'app.service.Message',
+    'app.service.Command',
     'ngAnimate-animate.css'
 ])
     .config(['$routeProvider',

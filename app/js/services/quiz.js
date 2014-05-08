@@ -116,10 +116,14 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             if (_this.timer <= 0) {
                 _this.updateScores(_this);
             } else {
-                _this.timerPromise = $timeout(function(event) {
-                    _this.timer -= 1;
-                    _this.updateTime(_this);
-                }, 1000);
+                if (Object.keys(PlayerService.players).length === 0) {
+                    _this.gameState = "TITLE";
+                } else {
+                    _this.timerPromise = $timeout(function(event) {
+                        _this.timer -= 1;
+                        _this.updateTime(_this);
+                    }, 1000);
+                }
             }
         }
 
@@ -143,13 +147,24 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             }
         }
 
-        this.loadQuiz = function(event) {
+        this.sendCategories = function(event) {
+            var _this = this;
+            MessageService.sendMessage(event.senderId, {
+                catagories: [{
+                    guiName: "BetaQuiz",
+                    dataName: "beta_quiz"
+                }]
+            });
+        }
+
+        this.loadQuiz = function(catagory) {
             var _this = this;
             _this.killExistingTimer();
             $http.get("quizes/quiz1.json").success(function(data, status, headers, config) {
                 _this.quiz = data;
             });
             this.currentIndex = -1;
+            this.currentQuestion
             this.gameState = "LOBBY";
             MessageService.broadcastMessage({
                 gameState: _this.gameState
