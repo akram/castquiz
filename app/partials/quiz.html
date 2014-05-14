@@ -82,7 +82,7 @@
 
     <div ng-switch-when="GAME_OVER" class="full-size">
         <div class="winner-text big-shadow-font">{{ winner }} has won the game!</div>
-        <div>
+        <div class="winner-detail">
             <div ng-repeat="display in displayPlayer" class="my-repeat-animation">
                 <div>Name: {{display.name}}</div>
                 <div>Score: {{display.score}}</div>
