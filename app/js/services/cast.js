@@ -6,8 +6,6 @@ angular.module('app.service.Cast', [])
         this.messages = [];
 
         this.onSenderConnected = function(event) {
-            console.log("Sender Connected");
-
             var senderId = event.data;
             var message = {
                 gameState: QuizService.gameState
@@ -16,8 +14,6 @@ angular.module('app.service.Cast', [])
         }
 
         this.onSenderDisconnected = function(event) {
-            console.log("Sender Disconnected");
-            console.log(event);
             PlayerService.removePlayer(event);
         }
 
@@ -28,12 +24,15 @@ angular.module('app.service.Cast', [])
             this.messages.push(message);
 
             switch (message.command) {
+                case "categories":
+                    QuizService.sendCategories(senderId);
+                    break;
                 case "newgame":
                     PlayerService.clearPlayers();
-                    console.log("Player " + senderId + ": New Game with Category: " + message.category);
+                    console.log("Player " + senderId + ": New Game with Category: " + message.categoryId);
                     PlayerService.playerJoin(event);
                     PlayerService.setHost(senderId);
-                    QuizService.loadQuiz();
+                    QuizService.loadQuiz(message.categoryId);
                     break;
                 case "join":
                     console.log("Player " + senderId + ": Join Game with Name: " + message.name);
@@ -80,9 +79,5 @@ angular.module('app.service.Cast', [])
         this.castReceiverManager.start({
             statusText: "Application is starting"
         });
-        console.log("It begins");
-        // QuizService.testAnimate();
-        // QuizService.gameState = "TITLE";
-
     }
 ]);

@@ -1,0 +1,105 @@
+{
+    "title": "Baseball",
+    "questions": [
+        {
+            "question": "This pitcher threw three no-hitters in his career, and set a record for throwing 12 one-hitters. Who is this Hall of Fame great?",
+            "choices": [
+                "Sandy Koufax",
+                "Bob Feller",
+                "Nolan Ryan",
+                "Cy Young"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Tim Wakefield of the Boston Red Sox tied a Major League record in 2004. What did Tim accomplish?",
+            "choices": [
+                "Hit four consecutive batters",
+                "Starting pitcher for both games of a doubleheader, and won them both",
+                "Pitched a game that he hit three home runs in",
+                "Gave up six home runs in a game"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which player in 1992 tied a record for being walked in seven consecutive at-bats?",
+            "choices": [
+                "Jose Canseco",
+                "Albert Belle",
+                "Barry Bonds",
+                "Mark McGwire"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "J.R. Richard of the Houston Astros set a modern-day record for throwing six wild pitches in a game in 1979. Which pitcher tied that record less than four months later?",
+            "choices": [
+                "Phil Niekro",
+                "Mike Morgan",
+                "Nolan Ryan",
+                "Greg Pinchbeck"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Larry Walker of the Colorado Rockies tied a record in April 1998 for doing what?",
+            "choices": [
+                "Played all the fielding positions in one game",
+                "Was thrown out twice caught stealing in the same inning",
+                "Hit nine home runs in nine consecutive at-bats",
+                "Hit for the cyle in one game, and it included a grand slam"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which modern-day Major League pitcher set a record for losing 18 consecutive games?",
+            "choices": [
+                "Roger Craig",
+                "Randy Jones",
+                "Mike Maroth",
+                "Pat Caraway"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Which player set a record for playing on the same team for 23 seasons?",
+            "choices": [
+                "Cal Ripken Jr.",
+                "Brooks Robinson",
+                "Mel Ott",
+                "Eddie Collins"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which player in the 1950s set a record for getting 12 hits in 12 consecutive at-bats?",
+            "choices": [
+                "Ted Williams",
+                "Walt Dropo",
+                "Gil McDougald",
+                "Hank Bauer"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "This pitcher must have had a lot of nervous ticks in the season because he set a Major League record for committing 16 balks. Who was this multiple 20-game winner?",
+            "choices": [
+                "Juan Marichal",
+                "Warren Spahn",
+                "Dave Stewart",
+                "Mickey Lolich"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Who was the first batter in Major League history to strike out 200 times in a season?",
+            "choices": [
+                "Bobby Bonds",
+                "Mark Reynolds",
+                "Reggie Jackson",
+                "Jay Buhner"
+            ],
+            "answer": 2
+        }
+    ]
+}

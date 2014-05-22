@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Food",
+        "quizes": [
+            "food/food1.json",
+            "food/food2.json",
+            "food/food3.json",
+            "food/food4.json"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Sports",
+        "quizes": [
+            "sports/sports1.json",
+            "sports/sports2.json",
+            "sports/sports3.json",
+            "sports/sports4.json"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Movies",
+        "quizes": [
+            "movies/movies1.json",
+            "movies/movies2.json",
+            "movies/movies3.json",
+            "movies/movies4.json"
+        ]
+    }
+]
