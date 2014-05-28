@@ -3,10 +3,7 @@
         "id": 0,
         "name": "Food",
         "quizes": [
-            "food/food1.json",
-            "food/food2.json",
-            "food/food3.json",
-            "food/food4.json"
+            "food/food1.json"
         ]
     },
     {
@@ -23,10 +20,7 @@
         "id": 2,
         "name": "Movies",
         "quizes": [
-            "movies/movies1.json",
-            "movies/movies2.json",
-            "movies/movies3.json",
-            "movies/movies4.json"
+            "movies/movies1.json"
         ]
     }
 ]
