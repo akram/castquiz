@@ -28,7 +28,7 @@
         <div class="col-md-4">
 
             <div class="scoreboard-container tan-box">
-                <div class="scoreboard-title">Scoreboard</div>
+                <div class="scoreboard-title row tan-box">Scoreboard</div>
                 <div ng-repeat='(key, prop) in players track by key' class="row" id="{{ players[key].name }}">
                     <div class="col-md-2 scoreboard-score">{{ players[key].score }}</div>
                     <div class="col-md-8 scoreboard-name">{{ players[key].name }}</div>
@@ -44,9 +44,7 @@
         <div class="row">
             <div class="col-md-8">Quiz Cast by Michael Allon</div>
             <div class="col-md-4">
-                <div class="tan-box header-timer">
-                    {{ timer }}
-                </div>
+                
             </div>
         </div>
         <div class="row">
@@ -65,9 +63,11 @@
 
             </div>
             <div class="col-md-4">
-
+                <div class="tan-box header-timer">
+                    {{ timer }}
+                </div>
                 <div class="scoreboard-container tan-box">
-                    <div class="scoreboard-title">Scoreboard</div>
+                    <div class="scoreboard-title row tan-box">Scoreboard</div>
                     <div ng-repeat='(key, prop) in players track by key' class="row player-row" id="{{ players[key].name }}">
                         <div class="col-md-2 scoreboard-score">{{ players[key].score }}</div>
                         <div class="col-md-8 scoreboard-name">{{ players[key].name }}</div>
@@ -81,7 +81,7 @@
     </div>
 
     <div ng-switch-when="GAME_OVER" class="full-size">
-        <div class="winner-text big-shadow-font">{{ winner }} has won the game!</div>
+        <div class="winner-text big-shadow-font"><h1 class="winner">({{ winner }})</h1> has won the game!</div>
         <div class="winner-detail">
             <div ng-repeat="display in displayPlayer" class="my-repeat-animation">
                 <div>Name: {{display.name}}</div>
