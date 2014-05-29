@@ -6,8 +6,6 @@ angular.module('app.service.Cast', [])
         this.messages = [];
 
         this.onSenderConnected = function(event) {
-            console.log("Sender Connected");
-
             var senderId = event.data;
             var message = {
                 gameState: QuizService.gameState
@@ -16,12 +14,11 @@ angular.module('app.service.Cast', [])
         }
 
         this.onSenderDisconnected = function(event) {
-            console.log("Sender Disconnected");
-            console.log(event);
             PlayerService.removePlayer(event);
         }
 
         this.onMessage = function(event) {
+		
             CommandService.executeCommand(event);
 
             $rootScope.$apply();
@@ -41,9 +38,5 @@ angular.module('app.service.Cast', [])
         this.castReceiverManager.start({
             statusText: "Application is starting"
         });
-        console.log("It begins");
-        // QuizService.testAnimate();
-        // QuizService.gameState = "TITLE";
-
     }
 ]);

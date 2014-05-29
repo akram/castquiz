@@ -1,0 +1,124 @@
+{
+    "title": "Movie by Mahem",
+    "questions": [
+        {
+            "question": "This Is Benjamin - He's A Little Bit Worried About His Future.",
+            "choices": [
+                "The Graduate",
+                "American Pie",
+                "Divorce American Style",
+                "Tootsie"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "In Space No One Can Hear You Scream.",
+            "choices": [
+                "Blade Runner",
+                "2001 - A Space Odessey",
+                "Predator", "Alien"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Who You Gonna Call?",
+            "choices": [
+                "Beetlejuice",
+                "Gremlins",
+                "The Goonies",
+                "Ghostbusters"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "I'm Scared To Close My Eyes, I'm Scared To Open Them.",
+            "choices": [
+                "The Blair Witch Project",
+                "The Ring",
+                "Evil Things",
+                "Paranormal Activity"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "It's Not A Rematch This Time, It's War.",
+            "choices": [
+                "Talons of the Eagle",
+                "Kickboxer",
+                "No Retreat No Surrender 2",
+                "The Circuit"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Eight Legs, Two Fangs, And An Attitude",
+            "choices": [
+                "Arachnophobia",
+                "Tarantula",
+                "Kingdom of the Spiders",
+                "Eight Legged Freaks"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Reality is a thing of the past.",
+            "choices": [
+                "The Matrix",
+                "Total Recall",
+                "The Terminator",
+                "Tron"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "This Ain't No Chick FLick! AND Escape or Die Frying",
+            "choices": [
+                "The Road to El Dorado",
+                "Shrek",
+                "Chicken Little",
+                "Chicken Run"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Some memories are best forgotten",
+            "choices": [
+                "The Departed",
+                "Memento",
+                "Unknown",
+                "Insomnia"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "You Won't Believe Your Eye",
+            "choices": [
+                "The Incredibles",
+                "Monster House",
+                "Finding Nemo",
+                "Monsters, Inc."
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Before you die, you see...",
+            "choices": [
+                "The Evil Dead",
+                "Saw",
+                "The Grudge",
+                "The Ring"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "She brought a small town to its feet and a huge corporation to its knees.",
+            "choices": [
+                "North Country",
+                "Erin Brockovich",
+                "A Civil Action",
+                "Sex, Lies, and Videotape"
+            ],
+            "answer": 1
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "title": "Hockey",
+    "questions": [
+        {
+            "question": "What NHL player was given the nickname The Roadrunner?",
+            "choices": [
+                "Maurice Richard",
+                "Phil Housley",
+                "Al Maclnnis",
+                "Yvan Cournoyer"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Who was the first-ever goaltender to be a captain in the NHL?",
+            "choices": [
+                "George Hainsworth",
+                "Alex Connell",
+                "Roy Worters",
+                "John Ross Roach"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which two NHL teams faced off in a preseason game in London in 1992?",
+            "choices": [
+                "Montreal Canadiens vs. Vancouver Canucks",
+                "Detroit Red Wings vs. New York Rangers",
+                "Chicago Blackhawks vs. Montreal Canadiens",
+                "Toronto Maple Leafs vs. Boston Bruins"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Who is the Conn Smythe Trophy awarded to?",
+            "choices": [
+                "Best goalie",
+                "Most valuable player to his team during the playoffs",
+                "Rookie of the year",
+                "Player with the most goals in the season"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Who was traded to Vancouver from Florida in the 2005-06 offseason?",
+            "choices": [
+                "Mike Ribeiro",
+                "Anson Carter",
+                "Roberto Luongo",
+                "Brent Sopel"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In the 1993-94 season, who did the Vancouver Canucks lose to in the Stanley Cup finals?",
+            "choices": [
+                "New York Islanders",
+                "New York Rangers",
+                "Boston Bruins",
+                "Montreal Canadiens"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "In the 2005 NHL entry draft, what player was drafted 1st round, 21st overall by the Toronto Maple Leafs?",
+            "choices": [
+                "Jakub Kindl",
+                "Alex Bourret",
+                "Ryan O'marra",
+                "Tuukka Rask"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "In 1966-67, what team won the Stanley Cup?",
+            "choices": [
+                "Montreal Canadiens",
+                "Toronto Maple Leafs",
+                "Chicago Blackhawks",
+                "Boston Bruins"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Who was left winger Taylor Pyatt drafted by in the 1999 NHL entry draft?",
+            "choices": [
+                "Buffalo Sabres",
+                "New York Islanders",
+                "Vancouver Canucks",
+                "Montreal Canadiens"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Who was the first player to ever win the Hart Trophy?",
+            "choices": [
+                "Eddie Shore",
+                "Billy Burch",
+                "Frank Nighbor",
+                "Howie Morenz"
+            ],
+            "answer": 2
+        }
+    ]
+}

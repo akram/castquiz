@@ -5,11 +5,29 @@ angular.module('app.service.Quiz', ['ngAnimate'])
 
         this.SCORE = 100;
         this.quiz;
+        this.categories;
         this.currentQuestion = {}
         this.currentIndex = -1;
         this.timer = 30;
         this.answers = {};
         this.gameState = "TITLE";
+
+        this.sendCategories = function(senderId) {
+            var _this = this;
+
+            // Check if we already have the categories
+            if (!this.categories) {
+                // Get the categories
+                $http.get("quizes/categories.json").success(function(data, status, headers, config) {
+                    _this.categories = data;
+
+                    // Send the categories
+                    MessageService.sendMessage(senderId, {
+                        categories: _this.categories
+                    });
+                });
+            }
+        }
 
         this.testAnimate = function() {
             var _this = this;
@@ -147,22 +165,26 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             }
         }
 
-        this.sendCategories = function(event) {
-            var _this = this;
-            MessageService.sendMessage(event.senderId, {
-                catagories: [{
-                    guiName: "BetaQuiz",
-                    dataName: "beta_quiz"
-                }]
-            });
-        }
+        this.loadQuiz = function(categoryId) {
 
-        this.loadQuiz = function(catagory) {
             var _this = this;
+
+            // Get the category
+            var category = _this.categories[categoryId];
+
+            // Select a random category for the quiz
+            var randomQuizIndex = Math.floor((Math.random() * (category.quizes.length - 1)));
+            var randomQuiz = category.quizes[randomQuizIndex];
+
+            // Kill the timer
             _this.killExistingTimer();
-            $http.get("quizes/quiz1.json").success(function(data, status, headers, config) {
+
+            // Get the quiz
+            $http.get("quizes/" + randomQuiz).success(function(data, status, headers, config) {
                 _this.quiz = data;
             });
+
+            // Go to the lobby
             this.currentIndex = -1;
             this.currentQuestion
             this.gameState = "LOBBY";
@@ -181,9 +203,8 @@ angular.module('app.service.Quiz', ['ngAnimate'])
                 this.timer = 0;
             }
             PlayerService.setAnswered(senderId);
-
         }
 
-
     }
+
 ]);

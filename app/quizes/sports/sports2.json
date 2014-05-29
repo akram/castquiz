@@ -1,0 +1,105 @@
+{
+    "title": "Basketball",
+    "questions": [
+        {
+            "question": "Yao Ming was the number one draft pick in the 2002 draft. Who went second overall?",
+            "choices": [
+                "Robert Archibald",
+                "Vincent Yarbrough",
+                "Carlos Boozer",
+                "Jay Williams"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Before becoming the Houston Rockets, where did the team play?",
+            "choices": [
+                "San Diego",
+                "Fort Wayne",
+                "St. Paul",
+                "Cleveland"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "Who was the Coach of the Year in the 1967-68 season for his efforts with the Hawks?",
+            "choices": [
+                "Dolph Shayes",
+                "Gene Shue",
+                "Bill Fitch",
+                "Richie Guerin"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "The NBA MVP Award first began for the 1955-56 season. Who won this inaugural award?",
+            "choices": [
+                "Dave Bing",
+                "Earl Monroe",
+                "Hal Greer",
+                "Bob Pettit"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Sidney Wicks played for 10 seasons with Portland, Boston, and San Diego. In his first six seasons, Wicks' averaged over 20 points per game. Which college did he attend?",
+            "choices": [
+                "Grambling",
+                "Auburn",
+                "UCLA",
+                "Georgetown"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which NBA player scored the most points in all the 1990s?",
+            "choices": [
+                "Scottie Pippen",
+                "Karl Malone",
+                "Shawn Kemp",
+                "Charles Barkley"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which of the following rookies of the year, won the award as a Laker?",
+            "choices": [
+                "Kareem Abdul Jabbar",
+                "Jamaal Wilkes",
+                "Wilt Chamberlain",
+                "Elgin Baylor"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which of the following retired with a career scoring average of over 30 points per game?",
+            "choices": [
+                "Wilt Chamberlain",
+                "Dominique Wilkins",
+                "Kareem Abdul-Jabbar",
+                "Larry Bird"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "I was born in Melbourne, Australia. I was schooled at Scotch College in Perth. After playing for New Mexico, I was the Timberwolves' first pick in the 1991 draft. I retired after playing in 10 NBA seasons with Minnesota, Chicago, Phoenix, and New York. Who am I?",
+            "choices": [
+                "Toni Kukoc",
+                "Chris Padtke",
+                "Mick Gaelin",
+                "Luc Longley"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "So much talk about Wilt Chamberlain scoring 100 points in a game on March 2, 1962. Who did his Philadelphia Warriors defeat in that game, 169-147?",
+            "choices": [
+                "New York Knicks",
+                "San Diego Clippers",
+                "Baltimore Bullets",
+                "Boston Celtics"
+            ],
+            "answer": 0
+        }
+    ]
+}

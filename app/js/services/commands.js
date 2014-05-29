@@ -33,14 +33,14 @@ angular.module('app.service.Command', [])
             switch (message.command) {
                 case "categories":
                     console.log("Player " + senderId + " asked for categories");
-                    QuizService.sendCategories(event);
+                    QuizService.sendCategories(senderId);
                     return true;
                 case "newgame":
                     PlayerService.clearPlayers();
                     console.log("Player " + senderId + ": New Game with Category: " + message.category);
                     PlayerService.playerJoin(event);
                     PlayerService.setHost(senderId);
-                    QuizService.loadQuiz(message.category);
+                    QuizService.loadQuiz(message.categoryId);
                     return true;
             }
             return false;
