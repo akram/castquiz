@@ -1,7 +1,7 @@
 angular.module('app.service.Player', [])
 
-.service('PlayerService', ['$rootScope', 'MessageService', '$animate', '$timeout',
-    function($rootScope, MessageService, $animate, $timeout) {
+.service('PlayerService', ['$rootScope', 'MessageService', 'QuizService' '$animate', '$timeout',
+    function($rootScope, MessageService, QuizService, $animate, $timeout) {
 
         this.players = {};
         this.displayPlayer = [];
@@ -35,7 +35,13 @@ angular.module('app.service.Player', [])
         }
 
         this.removePlayer = function(event) {
+            // Remove the player
             delete this.players[event.senderId];
+
+            // If there is no players left then kill the game
+            if (this.players.length === 0) {
+                QuizService.killGame(QuizService);
+            }
         }
 
         this.setWinners = function() {
@@ -51,8 +57,6 @@ angular.module('app.service.Player', [])
                 } else if (player.score === winningScore) {
                     this.winner += " " + player.name;
                 }
-
-
             }
         }
 
@@ -78,7 +82,6 @@ angular.module('app.service.Player', [])
                 });
             }
         }
-
 
         this.clearPlayers = function() {
             this.players = {};
@@ -112,7 +115,6 @@ angular.module('app.service.Player', [])
                 _this.show(_this, playerList, index);
             }, 600);
         }
-
 
     }
 ]);
