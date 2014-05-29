@@ -26,6 +26,11 @@ angular.module('app.service.Quiz', ['ngAnimate'])
                         categories: _this.categories
                     });
                 });
+            } else {
+                // Send the categories
+                MessageService.sendMessage(senderId, {
+                    categories: this.categories
+                });
             }
         }
 
