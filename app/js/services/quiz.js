@@ -130,6 +130,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
         }
 
         this.killGame = function(_this){
+            _this.killExistingTimer();
             delete _this.quiz;
             delete _this.categories;
             delete _this.currentQuestion;
