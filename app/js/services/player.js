@@ -1,6 +1,6 @@
 angular.module('app.service.Player', [])
 
-.service('PlayerService', ['$rootScope', 'MessageService', 'QuizService' '$animate', '$timeout',
+.service('PlayerService', ['$rootScope', 'MessageService', 'QuizService', '$animate', '$timeout',
     function($rootScope, MessageService, QuizService, $animate, $timeout) {
 
         this.players = {};
