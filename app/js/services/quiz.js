@@ -129,19 +129,28 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             }
         }
 
+        this.killGame = function(_this){
+            delete _this.quiz;
+            delete _this.categories;
+            delete _this.currentQuestion;
+            _this.currentIndex = -1;
+            _this.timer = 30;
+            delete _this.answers;
+            _this.gameState = "TITLE";
+
+        }
+
         this.updateTime = function(_this) {
 
             if (_this.timer <= 0) {
                 _this.updateScores(_this);
             } else {
-                if (Object.keys(PlayerService.players).length === 0) {
-                    _this.gameState = "TITLE";
-                } else {
-                    _this.timerPromise = $timeout(function(event) {
-                        _this.timer -= 1;
-                        _this.updateTime(_this);
-                    }, 1000);
-                }
+                
+                _this.timerPromise = $timeout(function(event) {
+                    _this.timer -= 1;
+                    _this.updateTime(_this);
+                }, 1000);
+                
             }
         }
 
