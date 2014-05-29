@@ -4,6 +4,7 @@ angular.module('app.service.Player', [])
     function($rootScope, MessageService, QuizService, $animate, $timeout) {
 
         this.players = {};
+        this.playerCount = 0;
         this.displayPlayer = [];
 
         function QuizPlayer(event) {
@@ -27,6 +28,7 @@ angular.module('app.service.Player', [])
         this.playerJoin = function(event) {
             var senderId = event.senderId;
             this.players[senderId] = new QuizPlayer(event);
+            this.playerCount++;
         }
 
         this.sendStats = function(event) {
@@ -37,9 +39,10 @@ angular.module('app.service.Player', [])
         this.removePlayer = function(event) {
             // Remove the player
             delete this.players[event.senderId];
+            this.playerCount--;
 
             // If there is no players left then kill the game
-            if (this.players.length === 0) {
+            if (this.playerCount === 0) {
                 QuizService.killGame(QuizService);
             }
         }
