@@ -1,7 +1,7 @@
 angular.module('app.controller.Quiz', ['ngAnimate'])
 
-.controller('QuizCtrl', ['$scope', 'CastService', 'QuizService', 'PlayerService',
-    function($scope, CastService, QuizService, PlayerService) {
+.controller('QuizCtrl', ['$rootScope','$scope', 'CastService', 'QuizService', 'PlayerService',
+    function($rootScope, $scope, CastService, QuizService, PlayerService) {
 
         window.$scope = $scope;
 
@@ -14,7 +14,7 @@ angular.module('app.controller.Quiz', ['ngAnimate'])
                 $scope.currentIndex = QuizService.currentIndex;
             }
         });
-        
+
         $scope.gameState = QuizService.gameState;
         $scope.$watch(function() {
             return QuizService.gameState
@@ -70,6 +70,10 @@ angular.module('app.controller.Quiz', ['ngAnimate'])
                 $scope.timer = QuizService.timer;
             }
         });
+
+        $rootScope.killGame = function() {
+            QuizService.killGame(QuizService);
+        };
 
     }
 ]);

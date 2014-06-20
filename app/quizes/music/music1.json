@@ -1,0 +1,95 @@
+{
+    "title": "Rock",
+    "questions": [
+        {
+            "question": "What's the name of the lead singer of Def Leopard?",
+            "choices": [
+                "Phil Collen",
+                "Joe Elliot",
+                "Steven Tyler",
+                "Axl Rose"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What year did Nirvana become Rock & Roll hall of fame inductees?",
+            "choices": [
+                "1994",
+                "1988",
+                "1999",
+                "2014"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What was the name of AC/DC's first Single?",
+            "choices": [
+                "TNT",
+                "High Voltage",
+                "Can I Sit Next to You, Girl",
+                "Highway to Hell"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What year did Elvis Presley pass?",
+            "choices": [
+                "1976",
+                "1977",
+                "1978",
+                "1979"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What was Elvis's middle name?",
+            "choices": [
+                "Aaron",
+                "Tyler",
+                "Eric",
+                "Vernon"
+            ],
+            "answer": 0
+        },
+        {
+            "question": "What generation is responsible for the birth of Rock & Roll?",
+            "choices": [
+                "1940s",
+                "1950s",
+                "1960s",
+                "1970s"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which rockstar was Courtney Love married to from 1992-1994?",
+            "choices": [
+                "Steven Tyler",
+                "James Moreland",
+                "Billy Corgan",
+                "Kurt Cobain"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is Ringo Starrs real name?",
+            "choices": [
+                "Rich Starling",
+                "George Harrison",
+                "Richard Starkey",
+                "Alec Star"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Where are the Beetles originally from?",
+            "choices": [
+                "Liverpool, UK",
+                "London, UK",
+                "Birmingham, UK",
+                "Manchester, UK"
+            ],
+            "answer": 0
+        }
+    ]
+}

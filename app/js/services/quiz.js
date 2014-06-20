@@ -87,7 +87,6 @@ angular.module('app.service.Quiz', ['ngAnimate'])
         }
 
         this.startGame = function(_this) {
-
             _this.killExistingTimer();
             _this.nextQuestion(_this);
         }
@@ -115,8 +114,6 @@ angular.module('app.service.Quiz', ['ngAnimate'])
                     _this.countUp(_this, nextQuestion);
                 })
             });
-
-
         }
 
         this.countUp = function(_this, nextQuestion) {
@@ -143,20 +140,18 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             _this.timer = 30;
             delete _this.answers;
             _this.gameState = "TITLE";
-
         }
 
         this.updateTime = function(_this) {
-
             if (_this.timer <= 0) {
                 _this.updateScores(_this);
             } else {
-                
+
                 _this.timerPromise = $timeout(function(event) {
                     _this.timer -= 1;
                     _this.updateTime(_this);
                 }, 1000);
-                
+
             }
         }
 

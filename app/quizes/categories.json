@@ -22,5 +22,12 @@
         "quizes": [
             "movies/movies1.json"
         ]
+    },
+    {
+        "id": 3,
+        "name": "Music",
+        "quizes": [
+            "music/music1.json"
+        ]
     }
 ]
