@@ -149,6 +149,9 @@ angular.module('app.service.Quiz', ['ngAnimate'])
 
                 _this.timerPromise = $timeout(function(event) {
                     _this.timer -= 1;
+                    if(_this.timer < 0){
+                        _this.timer = 0;
+                    }
                     _this.updateTime(_this);
                 }, 1000);
 
