@@ -51,13 +51,29 @@ body {
 
 .my-repeat-animation.ng-enter {
 
+    -webkit-animation: 0.5s fadeIn;
+
+    animation: 0.5s fadeIn;
+
+}
+
+.my-repeat-animation.ng-leave {
+
+    -webkit-animation: 0.5s fadeOut;
+
+    animation: 0.5s fadeOut;
+
+}
+
+.my-repeat-animation-winner.ng-enter {
+
     -webkit-animation: 3s fadeIn;
 
     animation: 3s fadeIn;
 
 }
 
-.my-repeat-animation.ng-leave {
+.my-repeat-animation-winner.ng-leave {
 
     -webkit-animation: 3s fadeOut;
 
