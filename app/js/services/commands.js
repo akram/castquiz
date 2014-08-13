@@ -37,7 +37,7 @@ angular.module('app.service.Command', [])
                     return true;
                 case "newgame":
                     PlayerService.clearPlayers();
-                    console.log("Player " + senderId + ": New Game with Category: " + message.category);
+                    console.log("Player " + senderId + ": New Game with Category: " + message.categoryId);
                     PlayerService.playerJoin(event);
                     PlayerService.setHost(senderId);
                     QuizService.loadQuiz(message.categoryId);
