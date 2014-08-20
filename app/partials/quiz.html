@@ -6,7 +6,7 @@
     </div>
     <div ng-switch-when="TITLE" class="big-shadow-font title-text full-size">
         <audio loop="loop" autoplay="autoplay">
-            <source src="audio/POL-online-deal-short.wav" />
+            <source src=/app/audio/POL-online-deal-short.wav" />
         </audio>
         <div class="title-relative scoreboard-name correct" style="font-size:50px">Welcome</div>
         <div class="title-relative" style="font-size:50px">to</div>
@@ -71,7 +71,7 @@
                     <div ng-repeat='(key, prop) in players track by key' class="row player-row" id="{{ players[key].name }}">
                         <div class="col-md-2 scoreboard-score">{{ players[key].score }}</div>
                         <div class="col-md-8 scoreboard-name">{{ players[key].name }}</div>
-                        <img class="col-md-2" style="height:30px" ng-if="players[key].answered" src="images/check.ico" />
+                        <img class="col-md-2" style="height:30px" ng-if="players[key].answered" src="/app/images/check.ico" />
 
                     </div>
                 </div>
