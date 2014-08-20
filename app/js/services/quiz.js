@@ -18,7 +18,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             // Check if we already have the categories
             if (!this.categories) {
                 // Get the categories
-                $http.get("quizes/categories.json").success(function(data, status, headers, config) {
+                $http.get("/app/quizes/categories.json").success(function(data, status, headers, config) {
                     _this.categories = data;
 
                     // Send the categories
