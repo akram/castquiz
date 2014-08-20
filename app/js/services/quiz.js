@@ -193,7 +193,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             _this.killExistingTimer();
 
             // Get the quiz
-            $http.get("quizes/" + randomQuiz).success(function(data, status, headers, config) {
+            $http.get("/app/quizes/" + randomQuiz).success(function(data, status, headers, config) {
                 _this.quiz = data;
             });
 
