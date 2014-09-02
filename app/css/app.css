@@ -49,7 +49,7 @@ body {
 
 }
 
-.my-repeat-animation.ng-enter {
+.my-repeat-animation.ng-enter, .question-fade-show, .question-fade-hide.question-fade-hide-active {
 
     -webkit-animation: 0.5s fadeIn;
 
@@ -57,7 +57,7 @@ body {
 
 }
 
-.my-repeat-animation.ng-leave {
+.my-repeat-animation.ng-leave,.question-fade-hide, .question-fade-show.question-fade-show-active {
 
     -webkit-animation: 0.5s fadeOut;
 
