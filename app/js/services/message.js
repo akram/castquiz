@@ -8,13 +8,13 @@ angular.module('app.service.Message', [])
 	this.sendMessage = function(senderId, message) {
 		message.version = this.version;
     	this.castMessageBus.send(senderId, message);
-    	console.log("SenderId: " + senderId + ", Message: " + JSON.Stringify(message))
+    	console.log("SenderId: " + senderId + ", Message: " + JSON.stringify(message))
 	}
 
 	this.broadcastMessage = function(message) {
 		message.version = this.version;
     	this.castMessageBus.broadcast(message);
-    	console.log("Broadcast Message: " + JSON.Stringify(message))
+    	console.log("Broadcast Message: " + JSON.stringify(message))
 	}
 
 }]);
