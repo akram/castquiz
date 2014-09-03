@@ -75,8 +75,9 @@ angular.module('app.service.Quiz', ['ngAnimate'])
         this.revealAnswer = function(_this) {
             $animate.addClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer", function() {
                 _this.nextQuestion(_this);
+                _this.gameState = "INTERMEDIATE";
                 MessageService.broadcastMessage({
-                    gameState: "INTERMEDIATE"
+                    gameState: _this.gameState
                 });
                 $animate.removeClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer");
             });
