@@ -1,0 +1,182 @@
+<html>
+    <body>
+        <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+        <script>
+(function() {
+  var APPLICATION_ID = "46EC073D";
+  var MSG_NAMESPACE = "urn:x-cast:com.akrambenaissi.namespace";
+  
+  var session;
+  
+  var btn_elem;
+  var start_session_btn;
+  var stop_session_btn;
+  var msg_elem;
+  
+  window['__onGCastApiAvailable'] = function(loaded, errorInfo) {
+    if (loaded) {
+      initializeCastApi();
+    } else {
+      log(errorInfo);
+    }
+  }
+  
+  function initializeCastApi() {
+    log("Initializing Cast...");
+    
+    var sessionRequest = new chrome.cast.SessionRequest(APPLICATION_ID);
+    var autoJoinPolicy = chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED;
+    var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
+      sessionListener,
+      receiverListener,
+      autoJoinPolicy);
+    chrome.cast.initialize(apiConfig, onInitSuccess, onError);
+  }
+  function receiverListener(e) {
+    log("Receiver event");
+    console.dir(e);
+    
+    if( e === chrome.cast.ReceiverAvailability.AVAILABLE) {
+      log("Receiver Available");
+    }
+    
+    updateUI();
+  }
+  
+  function sessionListener(e) {
+    log("Session event");
+    console.dir(e);
+    
+    session = e;
+    
+    if (session !== undefined) {
+      sendMessage("Hello from the sender!");
+    }
+    
+    updateUI();
+  }
+  
+  function updateUI() {
+    if (session !== undefined) {
+      start_session_btn.disabled = true;
+      stop_session_btn.disabled = false;
+      btn_elem.disabled = false;
+      msg_elem.disabled = false;
+    } else {
+      start_session_btn.disabled = false;
+      stop_session_btn.disabled = true;
+      btn_elem.disabled = true;
+      msg_elem.disabled = true;
+    }
+  }
+  
+  function onInitSuccess() {
+    log("Cast initialized successfully.");
+    
+    updateUI();
+  }
+  
+  function onError(e) {
+    log("Cast initialization error!");
+    console.dir(e);
+  }
+  
+  function launchSession() {
+    log("Launching Cast session...");
+    
+    if (session === undefined) {
+        log("Requesting new session");
+        chrome.cast.requestSession(sessionListener, onLaunchError);
+    } else {
+        log("Session already auto-joined");
+    }
+  }
+  
+  function stopSession() {
+    log("Stopping session...");
+    
+    if (session !== undefined) {
+      session.stop(stopSessionSuccess, stopSessionError);
+    }
+  }
+  
+  function stopSessionSuccess() {
+    log("Session stopped!");
+    session = undefined;
+    
+    updateUI();
+  }
+  
+  function stopSessionError(err) {
+    log("ERROR: Unable to stop session!");
+    log("ERROR: " + err);
+    
+    session = undefined;
+    
+    updateUI();
+  }
+  
+  function onLaunchError(e) {
+    log("Session launch error!");
+    console.dir(e);
+  }
+  
+  function sendMessage(body) {
+    session.sendMessage(MSG_NAMESPACE, body, onSendMsgSuccess, onSendMsgError);
+  }
+  
+  function onSendMsgSuccess(e) {
+    log("Message sent successfully.");
+    console.dir(e);
+  }
+  
+  function onSendMsgError(e) {
+    log("Messaging error!");
+    console.dir(e);
+    
+    if (e.code && e.code === "session_error") {
+      session = undefined;
+      
+      updateUI();
+    }
+  }
+  
+  function log(message) {
+    console.log(message);
+    var elem = document.getElementById("logger");
+    
+    elem.innerHTML = elem.innerHTML + message + "\n";
+  }
+  
+  window.onload = function() {
+    btn_elem = document.getElementById("send_msg_btn");
+    start_session_btn = document.getElementById('start_session_btn');
+    stop_session_btn = document.getElementById('stop_session_btn');
+    msg_elem = document.getElementById("msg");
+    
+    btn_elem.addEventListener('click', function(e) {
+      var msg = document.getElementById("msg").value;
+      
+      sendMessage(msg);
+    });
+    start_session_btn.addEventListener('click', function(e) {
+      launchSession();
+    });
+    stop_session_btn.addEventListener('click', function(e) {
+      stopSession();
+    })
+  };
+}());
+        </script>
+        <button id="start_session_btn" disabled>Start Casting</button>
+        <button id="stop_session_btn" disabled>Stop Casting</button>
+        <input type="text" id="msg" placeholder="your message here...">
+        <button id="send_msg_btn" disabled>Send</button>
+        <div>
+            <pre id="logger"></pre>
+        </div>
+    </body>
+</html>
+
+<h1>Test</h1>
+
