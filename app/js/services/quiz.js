@@ -1,5 +1,4 @@
 angular.module('app.service.Quiz', ['ngAnimate'])
-
 .service('QuizService', ['$rootScope', '$http', '$timeout', 'PlayerService', 'MessageService', '$animate',
     function($rootScope, $http, $timeout, PlayerService, MessageService, $animate) {
 
@@ -76,7 +75,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             $animate.addClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer", function() {
                 _this.nextQuestion(_this);
                 MessageService.broadcastMessage({
-                    gameState: "INTERMEDIATE";
+                    gameState: "INTERMEDIATE"
                 });
                 $animate.removeClass($(".answer:nth-child(" + (1 + _this.currentQuestion.answer) + ")"), "correct-answer");
             });
