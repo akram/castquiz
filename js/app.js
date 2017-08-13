@@ -12,7 +12,7 @@ angular.module('app', [
     .config(['$routeProvider',
         function($routeProvider) {
             $routeProvider.when('/quiz', {
-                templateUrl: '/partials/quiz.html',
+                templateUrl: '../partials/quiz.html',
                 controller: 'QuizCtrl'
             }).otherwise({
                 redirectTo: '/quiz'
