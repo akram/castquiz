@@ -17,7 +17,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             // Check if we already have the categories
             if (!this.categories) {
                 // Get the categories
-                $http.get("/app/quizes/categories.json").success(function(data, status, headers, config) {
+                $http.get("/quizes/categories.json").success(function(data, status, headers, config) {
                     _this.categories = data;
 
                     // Send the categories
@@ -192,7 +192,7 @@ angular.module('app.service.Quiz', ['ngAnimate'])
             _this.killExistingTimer();
 
             // Get the quiz
-            $http.get("/app/quizes/" + randomQuiz).success(function(data, status, headers, config) {
+            $http.get("/quizes/" + randomQuiz).success(function(data, status, headers, config) {
                 _this.quiz = data;
             });
 
