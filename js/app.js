@@ -11,8 +11,8 @@ angular.module('app', [
 ])
     .config(['$routeProvider',
         function($routeProvider) {
-            $routeProvider.when('/quiz', {
-                templateUrl: '../partials/quiz.html',
+            $routeProvider.when('/castquiz/quiz', {
+                templateUrl: '/castquiz/partials/quiz.html',
                 controller: 'QuizCtrl'
             }).otherwise({
                 redirectTo: '/castquiz/quiz'
