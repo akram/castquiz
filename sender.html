@@ -44,13 +44,15 @@
   }
   
   function sessionListener(e) {
-    log("Session event");
+    log("Session event" + e);
     console.dir(e);
     
     session = e;
     
     if (session !== undefined) {
       sendMessage("Hello from the sender!");
+    } else { 
+          log("Session is null: " + session);
     }
     
     updateUI();
