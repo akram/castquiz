@@ -15,7 +15,7 @@ angular.module('app', [
                 templateUrl: '../partials/quiz.html',
                 controller: 'QuizCtrl'
             }).otherwise({
-                redirectTo: '/quiz'
+                redirectTo: '/castquiz/quiz'
             });
         }
     ]);
